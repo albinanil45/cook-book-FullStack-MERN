@@ -64,7 +64,7 @@ const DashboardHome = () => {
     useEffect(() => {
         const fetchOverview = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/admin/overview", {
+                const res = await axios.get("https://cook-book-fullstack-mern.onrender.com/api/admin/overview", {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
                     },

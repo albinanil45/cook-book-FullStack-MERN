@@ -37,7 +37,7 @@ const ManageComplaints = () => {
     const fetchComplaints = async () => {
         try {
             setLoading(true);
-            const { data } = await axios.get("http://localhost:5000/api/complaints", {
+            const { data } = await axios.get("https://cook-book-fullstack-mern.onrender.com/api/complaints", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -60,7 +60,7 @@ const ManageComplaints = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:5000/api/complaints/${deleteId}`, {
+            await axios.delete(`https://cook-book-fullstack-mern.onrender.com/api/complaints/${deleteId}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

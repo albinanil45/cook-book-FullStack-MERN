@@ -31,7 +31,7 @@ const ManageUsers = () => {
     const fetchUsers = async () => {
         try {
             setLoading(true);
-            const res = await axios.get("http://localhost:5000/api/admin/users", {
+            const res = await axios.get("https://cook-book-fullstack-mern.onrender.com/api/admin/users", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setUsers(res.data);
@@ -51,7 +51,7 @@ const ManageUsers = () => {
     const blockUser = async (id) => {
         try {
             await axios.put(
-                `http://localhost:5000/api/admin/users/${id}/block`,
+                `https://cook-book-fullstack-mern.onrender.com/api/admin/users/${id}/block`,
                 {},
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -68,7 +68,7 @@ const ManageUsers = () => {
     const unblockUser = async (id) => {
         try {
             await axios.put(
-                `http://localhost:5000/api/admin/users/${id}/unblock`,
+                `https://cook-book-fullstack-mern.onrender.com/api/admin/users/${id}/unblock`,
                 {},
                 { headers: { Authorization: `Bearer ${token}` } }
             );

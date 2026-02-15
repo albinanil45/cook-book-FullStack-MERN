@@ -35,7 +35,7 @@ const ManageRecipes = () => {
     const fetchRecipes = async () => {
         try {
             setLoading(true);
-            const res = await axios.get("http://localhost:5000/api/recipes");
+            const res = await axios.get("https://cook-book-fullstack-mern.onrender.com/api/recipes");
             setRecipes(res.data);
             setFilteredRecipes(res.data);
         } catch (error) {
@@ -74,7 +74,7 @@ const ManageRecipes = () => {
     const confirmDelete = async () => {
         try {
             await axios.delete(
-                `http://localhost:5000/api/admin/recipes/${selectedId}`,
+                `https://cook-book-fullstack-mern.onrender.com/api/admin/recipes/${selectedId}`,
                 { headers: { Authorization: `Bearer ${token}` } }
             );
             setRecipes((prev) => prev.filter((r) => r._id !== selectedId));
