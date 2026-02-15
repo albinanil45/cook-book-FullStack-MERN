@@ -37,7 +37,7 @@ export function RecipeProvider({ children }) {
                 image: imageUrl,
             };
 
-            const res = await fetch('http://localhost:5000/api/recipes', {
+            const res = await fetch('https://cook-book-fullstack-mern.onrender.com/api/recipes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ export function RecipeProvider({ children }) {
         try {
             setLoading(true);
 
-            const res = await fetch('http://localhost:5000/api/recipes', {
+            const res = await fetch('https://cook-book-fullstack-mern.onrender.com/api/recipes', {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                 },

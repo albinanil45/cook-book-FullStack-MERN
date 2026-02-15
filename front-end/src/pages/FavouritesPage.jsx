@@ -51,7 +51,7 @@ const FavouritesPage = () => {
             setLoading(true);
             try {
                 const recipePromises = favourites.map((id) =>
-                    fetch(`http://localhost:5000/api/recipes/${id}`, {
+                    fetch(`https://cook-book-fullstack-mern.onrender.com/api/recipes/${id}`, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem('token')}`,
                         },

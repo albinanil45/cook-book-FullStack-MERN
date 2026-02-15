@@ -65,7 +65,7 @@ const AiRecipeGeneratePage = () => {
 
         try {
             const { data } = await axios.post(
-                'http://localhost:5000/api/ai/recipe',
+                'https://cook-book-fullstack-mern.onrender.com/api/ai/recipe',
                 { ingredients },
                 {
                     headers: {
@@ -90,7 +90,7 @@ const AiRecipeGeneratePage = () => {
 
         try {
             await axios.post(
-                'http://localhost:5000/api/ai/recipe/save',
+                'https://cook-book-fullstack-mern.onrender.com/api/ai/recipe/save',
                 recipe,
                 {
                     headers: {

@@ -51,7 +51,7 @@ function RecipeDetailPage() {
         const fetchRecipe = async () => {
             try {
                 const res = await fetch(
-                    `http://localhost:5000/api/recipes/${id}`,
+                    `https://cook-book-fullstack-mern.onrender.com/api/recipes/${id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem(
@@ -80,7 +80,7 @@ function RecipeDetailPage() {
         const fetchReviews = async () => {
             try {
                 const res = await fetch(
-                    `http://localhost:5000/api/recipes/${id}/reviews`
+                    `https://cook-book-fullstack-mern.onrender.com/api/recipes/${id}/reviews`
                 );
                 const data = await res.json();
                 setReviews(data || []);
@@ -126,7 +126,7 @@ function RecipeDetailPage() {
         try {
             setReviewLoading(true);
             const res = await fetch(
-                `http://localhost:5000/api/recipes/${id}/review`,
+                `https://cook-book-fullstack-mern.onrender.com/api/recipes/${id}/review`,
                 {
                     method: 'POST',
                     headers: {
@@ -155,7 +155,7 @@ function RecipeDetailPage() {
             setHasReviewed(true);
 
             const refresh = await fetch(
-                `http://localhost:5000/api/recipes/${id}/reviews`
+                `https://cook-book-fullstack-mern.onrender.com/api/recipes/${id}/reviews`
             );
             const updatedReviews = await refresh.json();
             setReviews(updatedReviews);
@@ -185,8 +185,8 @@ function RecipeDetailPage() {
         try {
             const token = localStorage.getItem('token');
             const url = isSaved
-                ? `http://localhost:5000/api/recipes/${recipe._id}/unsave`
-                : `http://localhost:5000/api/recipes/${recipe._id}/save`;
+                ? `https://cook-book-fullstack-mern.onrender.com/api/recipes/${recipe._id}/unsave`
+                : `https://cook-book-fullstack-mern.onrender.com/api/recipes/${recipe._id}/save`;
 
             await fetch(url, {
                 method: 'POST',

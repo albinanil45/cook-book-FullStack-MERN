@@ -48,7 +48,7 @@ const PostComplaintPage = () => {
             setLoading(true);
 
             await axios.post(
-                "http://localhost:5000/api/complaints",
+                "https://cook-book-fullstack-mern.onrender.com/api/complaints",
                 { content, referenceUrl },
                 {
                     headers: {

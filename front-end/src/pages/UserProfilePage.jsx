@@ -47,7 +47,7 @@ const UserProfilePage = () => {
             const token = localStorage.getItem('token');
 
             const userRes = await axios.get(
-                `http://localhost:5000/api/auth/user/${id}`,
+                `https://cook-book-fullstack-mern.onrender.com/api/auth/user/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -56,7 +56,7 @@ const UserProfilePage = () => {
             );
 
             const recipeRes = await axios.get(
-                `http://localhost:5000/api/recipes/user/${id}`
+                `https://cook-book-fullstack-mern.onrender.com/api/recipes/user/${id}`
             );
 
             setUser(userRes.data);

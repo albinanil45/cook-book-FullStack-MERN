@@ -52,7 +52,7 @@ const AiSavedRecipesPage = () => {
         const fetchSavedRecipes = async () => {
             try {
                 const { data } = await axios.get(
-                    'http://localhost:5000/api/ai/recipes',
+                    'https://cook-book-fullstack-mern.onrender.com/api/ai/recipes',
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
                 setRecipes(data);
@@ -93,7 +93,7 @@ const AiSavedRecipesPage = () => {
     const handleDelete = async () => {
         if (!deleteRecipeId) return;
         try {
-            await axios.delete(`http://localhost:5000/api/ai/recipe/${deleteRecipeId}`, {
+            await axios.delete(`https://cook-book-fullstack-mern.onrender.com/api/ai/recipe/${deleteRecipeId}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setRecipes((prev) => prev.filter((r) => r._id !== deleteRecipeId));

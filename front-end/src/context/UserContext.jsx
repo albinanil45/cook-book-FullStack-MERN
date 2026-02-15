@@ -14,7 +14,7 @@ export function UserProvider({ children }) {
         try {
             setLoading(true);
 
-            const res = await fetch("http://localhost:5000/api/auth/register", {
+            const res = await fetch("https://cook-book-fullstack-mern.onrender.com/api/auth/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export function UserProvider({ children }) {
         try {
             setLoading(true);
 
-            const res = await fetch("http://localhost:5000/api/auth/login", {
+            const res = await fetch("https://cook-book-fullstack-mern.onrender.com/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -74,7 +74,7 @@ export function UserProvider({ children }) {
             setLoading(true);
 
             const res = await fetch(
-                "http://localhost:5000/api/auth/me",
+                "https://cook-book-fullstack-mern.onrender.com/api/auth/me",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -102,7 +102,7 @@ export function UserProvider({ children }) {
             setLoading(true);
 
             const res = await fetch(
-                `http://localhost:5000/api/auth/user/${id}`,
+                `https://cook-book-fullstack-mern.onrender.com/api/auth/user/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -134,7 +134,7 @@ export function UserProvider({ children }) {
             };
 
             const res = await fetch(
-                `http://localhost:5000/api/auth/user/${user._id}`,
+                `https://cook-book-fullstack-mern.onrender.com/api/auth/user/${user._id}`,
                 {
                     method: "PUT",
                     headers: {

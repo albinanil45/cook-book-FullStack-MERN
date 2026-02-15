@@ -18,7 +18,7 @@ export const FavouriteProvider = ({ children }) => {
         if (!user) throw new Error('Not authenticated');
 
         const token = localStorage.getItem('token');
-        const res = await fetch(`http://localhost:5000/api/recipes/${recipeId}/save`, {
+        const res = await fetch(`https://cook-book-fullstack-mern.onrender.com/api/recipes/${recipeId}/save`, {
             method: 'POST',
             headers: { Authorization: `Bearer ${token}` },
         });
@@ -32,7 +32,7 @@ export const FavouriteProvider = ({ children }) => {
         if (!user) throw new Error('Not authenticated');
 
         const token = localStorage.getItem('token');
-        const res = await fetch(`http://localhost:5000/api/recipes/${recipeId}/unsave`, {
+        const res = await fetch(`https://cook-book-fullstack-mern.onrender.com/api/recipes/${recipeId}/unsave`, {
             method: 'POST',
             headers: { Authorization: `Bearer ${token}` },
         });

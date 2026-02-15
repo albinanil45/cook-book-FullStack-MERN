@@ -32,7 +32,7 @@ const AiRecipeDetailPage = () => {
         const fetchRecipe = async () => {
             setLoading(true);
             try {
-                const res = await fetch(`http://localhost:5000/api/ai/recipes/${id}`, {
+                const res = await fetch(`https://cook-book-fullstack-mern.onrender.com/api/ai/recipes/${id}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (!res.ok) throw new Error('Failed to fetch recipe');

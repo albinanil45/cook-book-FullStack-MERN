@@ -76,7 +76,7 @@ export default function ProfilePage() {
         try {
             setLoadingRecipes(true);
             const res = await fetch(
-                `http://localhost:5000/api/recipes/user/${user._id}`,
+                `https://cook-book-fullstack-mern.onrender.com/api/recipes/user/${user._id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
